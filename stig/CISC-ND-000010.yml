@@ -1,0 +1,22 @@
+title: CISC-ND-000010
+type: object
+required:
+  - 'openconfig-system:system'
+properties:
+  'openconfig-system:system':
+    description: OC System Model
+    type: object
+    required:
+      - config
+    properties:
+      config:
+        description: DNS settings
+        type: object
+        required:
+          - openconfig-system-ext:ip-http-max-connections
+        properties:
+            openconfig-system-ext:ip-http-max-connections:
+                type: integer
+                description: Max HTTP Connections
+                maximum: 2
+                minimum: 2
