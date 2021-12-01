@@ -1,0 +1,10 @@
+{
+
+    "$id": "CISC_IOSXE-ND.schema",
+
+    "allOf": [
+        { "$ref": "file:./CISC-ND-000010.schema"},
+        { "$ref": "file:./CISC-ND-000380.schema"},
+        { "$ref": "file:./CISC-ND-000470.schema"}
+    ]
+}
