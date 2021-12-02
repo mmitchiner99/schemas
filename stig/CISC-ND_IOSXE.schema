@@ -1,7 +1,7 @@
 {
-    "$id": "https://cisco.com/MDD_CISC-ND_IOSXE.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "CISC-ND_IOSXE",
+  "$id": "https://cisco.com/CISC-ND_IOSXE.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MDD_CISC-ND_IOSXE",
 
     "type": "object",
     "required": ["openconfig-system:system"],
