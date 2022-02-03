@@ -1,0 +1,13 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-ND_SERVICES.schema",
+    "title": "CISC_IOSXE-ND",
+
+
+    "allOf": [
+        { "$ref": "file:CISC-ND-000010.schema"},
+        { "$ref": "file:CISC-ND-000470a.schema"},
+        { "$ref": "file:CISC-ND-000720a.schema"},
+        { "$ref": "file:CISC-ND-001200b.schema"}
+    ]
+}

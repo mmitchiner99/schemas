@@ -1,0 +1,19 @@
+{
+
+    "$id": "nd_000160.schema",
+    "description": "STIG ID: CISC-ND-000160",
+
+    "type": "object",
+    "required": [
+        "login-banner"
+        ],
+    "properties": {
+        "login-banner": {
+            "type": "string",
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-000720"
+            }
+        }
+    }
+}
+

@@ -1,0 +1,181 @@
+{
+
+    "$id": "nd_001140.schema",
+    "description": "STIG ID: CISC-ND-001140",
+
+    "type": "object",
+    "required": ["openconfig-system-ext:snmp"],
+    "properties": {
+        "openconfig-system-ext:snmp": {
+            "required": ["snmp-server"],
+            "type": "object",
+            "properties": {
+                "snmp-server": {
+                    "required": ["group", "user"],
+                    "type": "object",
+                    "properties": {
+                        "group": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "required": ["name", "version"],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-001130 -- Host Address"
+                                        }
+                                    },
+                                    "version": {
+                                        "type": "string",
+                                        "enum": ["3"],
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-001130 -- Host Version"
+                                        }
+                                    }
+                                },
+                                "oneOf": [
+                                    {
+                                        "type": "object",
+                                        "required": ["auth"],
+                                        "properties": {
+                                            "auth": {
+                                                "type": "object",
+                                                "required": ["read", "write"],
+                                                "properties": {
+                                                    "read": {
+                                                        "type": "object",
+                                                        "required": ["name"],
+                                                        "properties": {
+                                                            "type": "string",
+                                                            "message": {
+                                                                "pattern": "Error in STIG ID: CISC-ND-001130 -- Group Auth Read"
+                                                            }
+                                                        }
+                                                    },
+                                                    "write": {
+                                                        "type": "object",
+                                                        "required": ["name"],
+                                                        "properties": {
+                                                            "type": "string",
+                                                            "message": {
+                                                                "pattern": "Error in STIG ID: CISC-ND-001130 -- Group Auth Write"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "type": "object",
+                                        "required": ["priv"],
+                                        "properties": {
+                                            "priv": {
+                                                "type": "object",
+                                                "required": ["read", "write"],
+                                                "properties": {
+                                                    "read": {
+                                                        "type": "object",
+                                                        "required": ["name"],
+                                                        "properties": {
+                                                            "type": "string",
+                                                            "message": {
+                                                                "pattern": "Error in STIG ID: CISC-ND-001130 -- Group Priv Read"
+                                                            }
+                                                        }
+                                                    },
+                                                    "write": {
+                                                        "type": "object",
+                                                        "required": ["name"],
+                                                        "properties": {
+                                                            "type": "string",
+                                                            "message": {
+                                                                "pattern": "Error in STIG ID: CISC-ND-001130 -- Group Priv Write"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "user": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "required": ["name", "group", "version", "auth", "password", "priv"],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-001140 -- User Name"
+                                        }
+                                    },
+                                    "group": {
+                                        "type": "string",
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-001140 -- User Group"
+                                        }
+                                    },
+                                    "version": {
+                                        "type": "string",
+                                        "enum": ["3"],
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-001140 -- User Version"
+                                        }
+                                    },
+                                    "auth": {
+                                        "type": "string",
+                                        "enum": ["sha"],
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-001140 -- User Auth: sha"
+                                        }
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-001140 -- User SHA Password"
+                                        }
+                                    },
+                                    "priv": {
+                                        "type": "object",
+                                        "required": ["password", "algorithm"],
+                                        "properties": {
+                                            "password": {
+                                                "type": "string",
+                                                "message": {
+                                                    "pattern": "Error in STIG ID: CISC-ND-001140 -- User Priv Password"
+                                                }
+                                            },
+                                            "algorithm": {
+                                                "type": "object",
+                                                "required": ["type", "bits"],
+                                                "properties": {
+                                                    "type": {
+                                                        "enum": ["aes"]
+                                                    },
+                                                    "bits": {
+                                                        "enum": ["128", "192", "256"]
+                                                    },
+                                                    "message": {
+                                                        "pattern": "Error in STIG ID: CISC-ND-001140 -- priv aes"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,73 @@
+{
+
+    "$id": "nd_000140.schema",
+    "description": "STIG ID: CISC-ND-000140",
+
+    "type": "object",
+    "required": ["config", "id"],
+    "if": {
+        "properties": {
+            "config": {
+                "type": "object",
+                "required": ["id"],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "const": "vty 0 4"
+                    }
+                }
+            }
+        }
+    },
+    "then": {
+        "properties": {
+            "config": {
+                "type": "object",
+                "required": ["id"],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "const": "vty 0 4"
+                    }
+                }
+            },
+            "id": {
+                "type": "string",
+                "pattern": "vty 0 4"
+            },
+            "ingress-acl-sets": {
+                "type": "object",
+                "required": ["ingress-acl-set"],
+                "properties": {
+                    "ingress-acl-set": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["ingress-acl-set-name", "config"],
+                            "properties": {
+                                "ingress-acl-set-name": {
+                                    "type": "string",
+                                    "message": {
+                                        "pattern": "Error in STIG ID: CISC-ND-000140 -- Missing ACL: line vty"
+                                    }
+                                },
+                                "config": {
+                                    "type": "object",
+                                    "required": ["ingress-acl-set-name"],
+                                    "properties": {
+                                        "ingress-acl-set-name": {
+                                            "type": "string",
+                                            "message": {
+                                                "pattern": "Error in STIG ID: CISC-ND-000140 -- Missing ACL: line vty"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

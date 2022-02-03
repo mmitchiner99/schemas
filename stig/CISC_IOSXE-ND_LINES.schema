@@ -1,0 +1,9 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-ND_LINES.schema",
+    "title": "CISC_IOSXE-ND_LINES",
+
+    "allOf": [
+        { "$ref": "file:CISC-ND-000140a.schema"}
+    ]
+}

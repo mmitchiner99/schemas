@@ -1,0 +1,13 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-RT_ROUTING.schema",
+    "title": "CISC_IOSXE-RT_ROUTING",
+
+
+    "type": "object",
+    "allOf": [
+        { "$ref": "file:CISC-RT-000020.schema"},
+        { "$ref": "file:CISC-RT-000040.schema"},
+        { "$ref": "file:CISC-RT-000470.schema"}
+    ]
+}

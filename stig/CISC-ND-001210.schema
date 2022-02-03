@@ -1,0 +1,55 @@
+{
+
+    "$id": "nd_001210.schema",
+    "description": "STIG ID: CISC-ND-001210",
+
+    "type": "object",
+    "required": [
+        "protocol-version",
+        "config"
+        ],
+    "properties": {
+        "protocol-version": {
+            "type": "string",
+             "const": "V2",
+             "message": {
+                  "pattern": "Error in STIG ID: CISC-ND-001210 -- Protocol Version"
+             }
+        },
+        "config": {
+            "required": [
+                "algorithm"
+            ],
+            "properties": {
+                "algorithm": {
+                    "required": [
+                        "encryption"
+                    ],
+                    "properties": {
+                        "encryption": {
+                            "type": "array",
+                            "items": {
+                                "enum": [
+                                    "aes256-ctr", 
+                                    "aes256-cbc", 
+                                    "aes192-ctr", 
+                                    "aes192-cbc", 
+                                    "aes128-ctr", 
+                                    "aes128-cbc"
+                                ],
+                                "required": [
+                                    "aes256-ctr",
+                                    "aes256-cbc"
+                                ]
+                            },
+                            "uniqueItems": true,
+                            "message": {
+                             "pattern": "Error in STIG ID: CISC-ND-001210 -- Encryption Algorithm"
+                             }
+                        }
+                    }
+                 }
+            }
+        }
+    }
+}

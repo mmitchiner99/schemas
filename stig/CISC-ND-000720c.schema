@@ -1,0 +1,21 @@
+{
+
+    "$id": "nd_000720c.schema",
+    "description": "STIG ID: CISC-ND-000720",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext:console-exec-timeout-seconds"
+        ],
+    "properties": {
+        "openconfig-system-ext:console-exec-timeout-seconds": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 600,
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-000720 -- Console Timeout"
+            }
+        }
+    }
+}
+

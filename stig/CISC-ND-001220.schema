@@ -1,0 +1,41 @@
+{
+
+    "$id": "nd_001220.schema",
+    "description": "STIG ID: CISC-ND-001220",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext"
+        ],
+    "properties": {
+        "openconfig-system-ext": {
+            "required": [
+                "control-plane"
+            ],
+            "properties": {
+                "control-plane": {
+                    "required": [
+                        "service-policy"
+                    ],
+                    "properties": {
+                        "service-policy": {
+                            "required": [
+                                "input"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                                "input": {
+                                    "type": "string",
+                                    "message": {
+                                        "pattern": "Error in STIG ID: CISC-ND-001220 -- control-plane service-policy"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

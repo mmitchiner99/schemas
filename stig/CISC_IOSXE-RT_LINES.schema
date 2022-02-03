@@ -1,0 +1,10 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-RT_LINES.schema",
+    "title": "CISC_IOSXE-RT_LINES",
+
+
+    "allOf": [
+        { "$ref": "file:CISC-RT-000230.schema"}
+    ]
+}

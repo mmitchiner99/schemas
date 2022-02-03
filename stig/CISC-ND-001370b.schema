@@ -1,0 +1,33 @@
+{
+
+    "$id": "nd_001370b.schema",
+    "description": "STIG ID: CISC-ND-001370",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext:ip-http-authentication"
+    ],
+    "properties": {
+        "openconfig-system-ext:ip-http-authentication": {
+            "required": [
+                "aaa"
+            ],
+            "properties": {
+                "aaa": {
+                    "type": "object",
+                    "required": [
+                        "login-authentication"
+                    ],
+                    "properties": {
+                        "login-authentication": {
+                            "type": "string",
+                             "message": {
+                                 "pattern": "Error in STIG ID: CISC-ND-001370 -- IP HTTP Auth AAA login-auth"
+                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

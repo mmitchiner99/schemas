@@ -1,7 +1,7 @@
 {
 
-    "$id": "nd_000380.schema",
-    "description": "STIG ID: CISC-ND-000380",
+    "$id": "nd_000390.schema",
+    "description": "STIG ID: CISC-ND-000390",
 
     "type": "object",
     "required": [
@@ -9,12 +9,12 @@
         ],
     "properties": {
         "openconfig-system-ext:file-privilege": {
-            "type": "number",
             "minimum": 15,
             "maximum": 15,
             "message": {
-                "pattern": "Error in STIG ID: CISC-ND-000380"
+                "pattern": "Error in STIG ID: CISC-ND-000390"
             }
         }
     }
 }
+

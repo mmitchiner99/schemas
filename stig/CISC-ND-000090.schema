@@ -1,0 +1,19 @@
+{
+
+    "$id": "nd_000090.schema",
+    "description": "STIG ID: CISC-ND-000090",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext:archive-logging"
+        ],
+    "properties": {
+        "openconfig-system-ext:archive-logging": {
+            "const": true,
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-000090"
+            }
+        }
+    }
+}
+

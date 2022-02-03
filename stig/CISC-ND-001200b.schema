@@ -1,0 +1,44 @@
+{
+
+    "$id": "nd_001200b.schema",
+    "description": "STIG ID: CISC-ND-001200",
+
+    "type": "object",
+    "required": ["openconfig-system-ext:http"],
+    "properties": {
+        "openconfig-system-ext:http": {
+            "type": "object",
+            "required": ["openconfig-system-ext:https-enabled", "openconfig-system-ext:ip-http-secure-ciphersuite"],
+            "properties": {
+                "openconfig-system-ext:https-enabled": {
+                    "const": true,
+                    "message": {
+                        "pattern": "Error in STIG ID: CISC-ND-0001200 (HTTP Secure-server)"
+                    }
+                }
+            },
+            "properties": {
+                "openconfig-system-ext:ip-http-secure-ciphersuite": {
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "aes-128-cbc-sha",
+                            "aes-256-cbc-sha"
+                        ],
+                        "uniqueItems": true,
+                        "message": {
+                            "pattern": "Error in STIG ID: CISC-ND-001200 -- HTTP Secure-ciphersuite"
+                        }
+                    },
+                    "contains": {
+                        "type": "string",
+                        "const": "aes-256-cbc-sha"
+                    },
+                    "minContains": 1,
+                    "maxContains": 11
+                }
+            }
+        }
+    }
+}
+

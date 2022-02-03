@@ -1,7 +1,7 @@
 {
 
-    "$id": "nd_001310.schema",
-    "description": "STIG ID: CISC-ND-001310",
+    "$id": "nd_001000.schema",
+    "description": "STIG ID: CISC-ND-001000",
 
     "type": "object",
     "required": [
@@ -13,14 +13,14 @@
             "type": "string",
             "enum": ["EMERGENCY", "ALERT", "CRITICAL", "ERROR", "WARNING", "NOTICE", "INFORMATIONAL", "DEBUG"],
             "message": {
-                 "pattern": "Error in STIG ID: CISC-ND-001310 -- Severity"
+                 "pattern": "Error in STIG ID: CISC-ND-001000 -- Severity"
             }
         },
         "remote-servers:remote-server:config:host": {
             "type": "string",
             "pattern": "\\b((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\b",
             "message": {
-                 "pattern": "Error in STIG ID: CISC-ND-001310 -- Host"
+                 "pattern": "Error in STIG ID: CISC-ND-001000 -- Host"
             }
         }
     }

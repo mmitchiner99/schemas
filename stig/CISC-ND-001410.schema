@@ -1,0 +1,31 @@
+{
+
+    "$id": "nd_001410.schema",
+    "description": "STIG ID: CISC-ND-001410",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext"
+        ],
+    "properties": {
+        "openconfig-system-ext": {
+            "required": [
+                "event-manager"
+            ],
+            "event-manager": {
+                "required": [
+                    "applet"
+                ],
+                "properties": {
+                    "applet": {
+                        "type": "string",
+                        "message": {
+                            "pattern": "Error in STIG ID: CISC-ND-001410"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

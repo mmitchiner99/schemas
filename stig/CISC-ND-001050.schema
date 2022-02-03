@@ -1,0 +1,26 @@
+{
+
+    "$id": "nd_001050.schema",
+    "description": "STIG ID: CISC-ND-001050",
+
+    "type": "object",
+    "required": [
+        "config:timestamp:datetime",
+        "config:timestamp:localtime"
+        ],
+    "properties": {
+        "config:timestamp:datetime": {
+            "const": true,
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-001050 -- datetime"
+            }
+        },
+        "config:timestamp:localtime": {
+            "const": true,
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-001050 -- localtime"
+            }
+        }
+    }
+}
+

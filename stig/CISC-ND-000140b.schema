@@ -1,0 +1,170 @@
+{
+
+    "$id": "nd_000140b.schema",
+    "description": "STIG ID: CISC-ND-000140",
+
+    "type": "object",
+    "required": ["config", "name", "type", "acl-entries"],
+
+    "if": {
+        "properties": {
+            "config": {
+                "type": "object",
+                "required": ["name", "type"],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "pattern": "\\bMANAGEMENT_NET\\b"
+                    },
+                    "type": {
+                        "type": "string",
+                        "const": "openconfig-acl-ext:ACL_IPV4_STANDARD"
+                    }
+                }
+            }
+        }
+    },
+    "then": {
+        "properties": {
+            "config": {
+                "type": "object",
+                "required": ["name", "type"],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "pattern": "\\bMANAGEMENT_NET\\b"
+                    },
+                    "type": {
+                        "type": "string",
+                        "const": "openconfig-acl-ext:ACL_IPV4_STANDARD"
+                    }
+                }
+            },
+            "name": {
+                "type": "string",
+                "pattern": "\\bMANAGEMENT_NET\\b"
+            },
+            "type": {
+                "type": "string",
+                "const": "openconfig-acl-ext:ACL_IPV4_STANDARD"
+            },
+            "acl-entries": {
+                "type": "object",
+                "required": ["acl-entry"],
+                "properties": {
+                    "acl-entry": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["actions", "openconfig-acl-ext:ipv4"],
+                            "properties": {
+                                "actions": {
+                                    "type": "object",
+                                    "required": ["config"],
+                                    "properties": {
+                                        "config": {
+                                            "type": "object",
+                                            "required": ["forwarding-action"],
+                                            "properties": {
+                                                "forwarding-action": {
+                                                    "enum": ["ACCEPT", "DROP"]
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "openconfig-acl-ext:ipv4": {
+                                    "type": "object",
+                                    "required": ["source-address"],
+                                    "properties": {
+                                        "source-address": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "allOf": [ 
+                            {
+                                "contains": {
+                                    "type": "object",
+                                    "required": ["actions", "openconfig-acl-ext:ipv4"],
+                                    "properties": {
+                                        "actions": {
+                                            "type": "object",
+                                            "required": ["config"],
+                                            "properties": {
+                                                "config": {
+                                                    "type": "object",
+                                                    "required": ["forwarding-action"],
+                                                    "properties": {
+                                                        "forwarding-action": {
+                                                            "enum": ["ACCEPT"]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "openconfig-acl-ext:ipv4": {
+                                            "type": "object",
+                                            "required": ["source-address"],
+                                            "properties": {
+                                                "source-address": {
+                                                    "type": "string",
+                                                    "const": "0.0.0.0/0"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "message": {
+                                        "pattern": "Error in STIG ID: CISC-ND-000140 -- NO Permit ANY in config"
+                                    }
+                                },
+                                "minContains": 0,
+                                "maxContains": 0
+                            },
+                            {
+                                "contains": {
+                                    "type": "object",
+                                    "required": ["actions", "openconfig-acl-ext:ipv4"],
+                                    "properties": {
+                                        "actions": {
+                                            "type": "object",
+                                            "required": ["config"],
+                                            "properties": {
+                                                "config": {
+                                                    "type": "object",
+                                                    "required": ["forwarding-action"],
+                                                    "properties": {
+                                                        "forwarding-action": {
+                                                            "enum": ["DROP"]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "openconfig-acl-ext:ipv4": {
+                                            "type": "object",
+                                            "required": ["source-address"],
+                                            "properties": {
+                                                "source-address": {
+                                                    "type": "string",
+                                                    "const": "0.0.0.0/0"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "message": {
+                                        "pattern": "Error in STIG ID: CISC-ND-000140 -- DROP ANY does not exist"
+                                    }
+                                },
+                                "minContains": 1,
+                                "maxContains": 1
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

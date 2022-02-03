@@ -1,0 +1,11 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-RT_SERVICES.schema",
+    "title": "CISC_IOSXE-RT",
+
+
+    "allOf": [
+        { "$ref": "file:CISC-RT-000070a.schema"},
+        { "$ref": "file:CISC-RT-000090b.schema"}
+    ]
+}

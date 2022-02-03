@@ -1,0 +1,31 @@
+{
+
+    "$id": "nd_001260.schema",
+    "description": "STIG ID: CISC-ND-001260",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext:login-security-policy"
+    ],
+    "properties": {
+        "openconfig-system-ext:login-security-policy": {
+            "required": [
+                "on-success", "on-failure"
+            ],
+            "properties": {
+                "on-success": {
+                    "const": true,
+                    "message": {
+                         "pattern": "Error in STIG ID: CISC-ND-001260"
+                     }
+                },
+                "on-failure": {
+                    "const": true,
+                    "message": {
+                         "pattern": "Error in STIG ID: CISC-ND-001260"
+                     }
+                }
+            }
+        }
+    }
+}

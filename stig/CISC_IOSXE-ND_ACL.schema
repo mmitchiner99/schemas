@@ -1,0 +1,11 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-ND_ACL.schema",
+    "title": "CISC_IOSXE-ND_ACL",
+
+
+    "allOf": [
+        { "$ref": "file:CISC-ND-000140b.schema"},
+        { "$ref": "file:CISC-ND-000290.schema"}
+    ]
+}

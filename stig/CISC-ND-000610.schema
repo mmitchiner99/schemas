@@ -1,0 +1,53 @@
+{
+
+    "$id": "nd_000610.schema",
+    "description": "STIG ID: CISC-ND-000610",
+
+    "type": "object",
+    "required": [
+        "config"
+        ],
+    "properties": {
+        "config": {
+            "required": [
+                "common-criteria"
+            ],
+            "properties": {
+                "common-criteria": {
+                    "type": "object",
+                    "required": [
+                        "policy"
+                    ],
+                    "properties": {
+                        "policy": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "policy-name",
+                                    "char-changes"
+                                ],
+                                "properties": {
+                                    "policy-name": {
+                                        "type": "string",
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-000610 -- policy-name"
+                                        }
+                                    },
+                                    "char-changes": {
+                                        "type": "number",
+                                        "minimum": 8,
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-000610 -- char-changes"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

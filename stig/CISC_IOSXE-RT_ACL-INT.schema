@@ -1,0 +1,10 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-RT_ACL-INT.schema",
+    "title": "CISC_IOSXE-RT_ACL-INT",
+
+
+    "allOf": [
+        { "$ref": "file:CISC-RT-000010.schema"}
+    ]
+}

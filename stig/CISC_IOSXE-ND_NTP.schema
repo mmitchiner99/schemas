@@ -1,9 +1,10 @@
 {
 
     "$id": "https://cisco.com/CISC_IOSXE-ND_NTP.schema",
+    "title": "CISC_IOSXE-ND_NTP",
 
     "allOf": [
-        { "$ref": "file:./CISC-ND-001030.schema"},
-        { "$ref": "file:./CISC-ND-001310.schema"}
+        { "$ref": "file:CISC-ND-001030.schema"},
+        { "$ref": "file:CISC-ND-001150.schema"}
     ]
 }

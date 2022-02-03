@@ -5,7 +5,6 @@
 
     "type": "object",
     "required": [
-        "openconfig-system-ext:http",
         "openconfig-system-ext:ip-boot_server",
         "openconfig-system-ext:ip-bootp_server",
         "openconfig-system-ext:ip-dns_server",
@@ -18,24 +17,6 @@
         "openconfig-system-ext:service_udp_small_servers"
         ],
     "properties": {
-        "openconfig-system-ext:http": {
-            "type": "object",
-            "required": ["openconfig-system-ext:http-enabled", "openconfig-system-ext:https-enabled"],
-            "properties": {
-                "openconfig-system-ext:http-enabled": {
-                    "const": false,
-                    "message": {
-                        "pattern": "Error in STIG ID: CISC-ND-000470 (ip-http_server)"
-                    }
-                },
-                "openconfig-system-ext:https-enabled": {
-                    "const": true,
-                    "message": {
-                        "pattern": "Error in STIG ID: CISC-ND-000470 (ip-https_server)"
-                    }
-                }
-            }
-        },
         "openconfig-system-ext:ip-boot_server": {
             "const": false,
             "message": {

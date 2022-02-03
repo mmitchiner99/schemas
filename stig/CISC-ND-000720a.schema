@@ -1,0 +1,36 @@
+{
+
+    "$id": "nd_000720a.schema",
+    "description": "STIG ID: CISC-ND-000720",
+
+    "type": "object",
+    "required": ["openconfig-system-ext:http"],
+    "properties": {
+        "openconfig-system-ext:http": {
+            "type": "object",
+            "required": ["openconfig-system-ext:ip-http-timeout-policy"],
+            "properties": {
+                "openconfig-system-ext:ip-http-timeout-policy": {
+                    "type": "object",
+                    "required": ["openconfig-system-ext:idle"],
+                    "properties": {
+                        "openconfig-system-ext:idle": {
+                            "type": "object",
+                            "required": ["openconfig-system-ext:connection"],
+                            "properties": {
+                                "openconfig-system-ext:connection": {
+                                    "type": "number",
+                                    "minimum": 600,
+                                    "maximum": 600,
+                                    "message": {
+                                        "pattern": "Error in STIG ID: CISC-ND-000720 -- HTTP Timeout"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

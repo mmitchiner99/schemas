@@ -1,0 +1,80 @@
+{
+    "$id": "https://cisco.com/MDD_CISC-ND_IOSXE.schema",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "MDD_CISC-ND_IOSXE",
+
+    "type": "object",
+    "required": ["mdd:openconfig"],
+    "properties": {
+        "mdd:openconfig": {
+            "type": "object",
+            "required": ["openconfig-system:system", "openconfig-acl:acl", "openconfig-acl-ext:lines"],
+            "properties": {
+                "openconfig-system:system": {
+                    "type": "object",
+                    "required": ["openconfig-system-ext:services", "config", "aaa", "ntp", "logging", "ssh-server"],
+                    "properties": {
+                        "openconfig-system-ext:services": {
+                            "description": "STIG: CISC_IOSXE-ND_SERVICES",
+                            "$ref": "file:CISC_IOSXE-ND_SERVICES.schema"
+                        },
+                        "config": {
+                            "description": "STIG: CISC_IOSXE-ND_CONFIG",
+                            "$ref": "file:CISC_IOSXE-ND_CONFIG.schema"
+                        },
+                        "aaa": {
+                            "description": "STIG: CISC_IOSXE-ND_AAA",
+                            "$ref": "file:CISC_IOSXE-ND_AAA.schema"
+                        },
+                        "ntp": {
+                            "description": "STIG: CISC_IOSXE-ND_NTP",
+                            "$ref": "file:CISC_IOSXE-ND_NTP.schema"
+                        },
+                        "logging": {
+                            "description": "STIG: CISC_IOSXE-ND_LOGGING",
+                            "$ref": "file:CISC_IOSXE-ND_LOGGING.schema"
+                        },
+                        "ssh-server": {
+                            "description": "STIG: CISC_IOSXE-ND_SSH",
+                            "$ref": "file:CISC_IOSXE-ND_SSH.schema"
+                        }
+                    }
+                },
+                "openconfig-acl:acl": {
+                    "type": "object",
+                    "required": ["acl-sets"],
+                    "properties": {
+                        "acl-sets": {
+                            "type": "object",
+                            "properties": {
+                                "acl-set": {
+                                    "type": "array",
+                                    "items": {
+                                        "description": "STIG: CISC_IOSXE-ND_ACL",
+                                        "$ref": "file:CISC_IOSXE-ND_ACL.schema"
+                                     },
+                                    "minItems": 1
+                                 }
+                             }
+                         }
+                    }
+                },
+                "openconfig-acl-ext:lines": {
+                    "type": "object",
+                    "required": ["line"],
+                    "properties": {
+                        "line": {
+                            "type": "array",
+                            "items": {
+                                "description": "STIG: CISC_IOSXE-ND_LINES",
+                                "$ref": "file:CISC_IOSXE-ND_LINES.schema"
+                            },
+                            "minItems": 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

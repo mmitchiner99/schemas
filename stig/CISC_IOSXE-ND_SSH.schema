@@ -1,0 +1,13 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-ND_SSH.schema",
+    "title": "CISC_IOSXE-ND_SSH",
+
+
+    "allOf": [
+        { "$ref": "file:CISC-ND-000530.schema"},
+        { "$ref": "file:CISC-ND-000720b.schema"},
+        { "$ref": "file:CISC-ND-001200a.schema"},
+        { "$ref": "file:CISC-ND-001210.schema"}
+    ]
+}

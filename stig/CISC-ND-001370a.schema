@@ -1,0 +1,73 @@
+{
+
+    "$id": "nd_001370.schema",
+    "description": "STIG ID: CISC-ND-001370",
+
+    "type": "object",
+    "required": [
+        "server-groups"
+        ],
+    "properties": {
+        "server-groups": {
+            "required": [
+                "server-group"
+            ],
+            "properties": {
+                "server-group": {
+                    "type": "object",
+                    "required": [
+                        "servers"
+                    ],
+                    "properties": {
+                        "servers": {
+                            "type": "object",
+                            "required": [
+                                "server"
+                            ],
+                            "properties": {
+                                "server": {
+                                    "type": "object",
+                                    "required": [
+                                        "address",
+                                        "radius"
+                                    ],
+                                    "properties": {
+                                        "address": {
+                                            "type": "string",
+                                            "pattern": "\\b((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\b",
+                                            "message": {
+                                                "pattern": "Error in STIG ID: CISC-ND-001370 -- Address"
+                                            }
+                                        },
+                                        "radius": {
+                                            "type": "object",
+                                            "required": [
+                                                "config"
+                                            ],
+                                            "properties": {
+                                                "config": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "secret-key"
+                                                    ],
+                                                    "properties": {
+                                                        "secret-key": {
+                                                            "type": "string",
+                                                            "message": {
+                                                                "pattern": "Error in STIG ID: CISC-ND-001370 -- secret-key"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

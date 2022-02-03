@@ -1,0 +1,25 @@
+{
+
+    "$id": "nd_000210.schema",
+    "description": "STIG ID: CISC-ND-000210",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext:logging-userinfo",
+        "openconfig-system-ext:archive-logging"
+        ],
+    "properties": {
+        "openconfig-system-ext:logging-userinfo": {
+            "const": true,
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-000210"
+            }
+        },
+        "openconfig-system-ext:archive-logging": {
+            "const": true,
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-000210"
+            }
+        }
+    }
+}

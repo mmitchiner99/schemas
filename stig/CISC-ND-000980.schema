@@ -1,0 +1,20 @@
+{
+
+    "$id": "nd_000980.schema",
+    "description": "STIG ID: CISC-ND-000980",
+
+    "type": "object",
+    "required": [
+        "config:buffered:size"
+        ],
+    "properties": {
+        "config:buffered:size": {
+            "type": "number",
+            "minimum": 4096,
+            "maximum": 2147483647,
+            "message": {
+                 "pattern": "Error in STIG ID: CISC-ND-000980"
+            }
+        }
+    }
+}

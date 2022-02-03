@@ -1,0 +1,50 @@
+{
+
+    "$id": "nd_001200a.schema",
+    "description": "STIG ID: CISC-ND-001200",
+
+    "type": "object",
+    "required": [
+        "protocol-version",
+        "config"
+        ],
+    "properties": {
+        "protocol-version": {
+            "type": "string",
+             "const": "V2",
+             "message": {
+                  "pattern": "Error in STIG ID: CISC-ND-001200 -- Protocol Version"
+             }
+        },
+        "config": {
+            "required": [
+                "algorithm"
+            ],
+            "properties": {
+                "algorithm": {
+                    "required": [
+                        "mac"
+                    ],
+                    "properties": {
+                        "mac": {
+                            "type": "array",
+                            "items": {
+                                "enum": [
+                                    "hmac-sha2-256", 
+                                    "hmac-sha2-512" 
+                                ],
+                                "required": [
+                                    "hmac-sha2-256"
+                                ]
+                            },
+                            "uniqueItems": true,
+                            "message": {
+                             "pattern": "Error in STIG ID: CISC-ND-001200 -- Mac Algorithm"
+                             }
+                        }
+                    }
+                 }
+            }
+        }
+    }
+}

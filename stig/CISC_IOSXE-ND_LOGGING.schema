@@ -1,0 +1,14 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-ND_LOGGING.schema",
+    "title": "CISC_IOSXE-ND_LOGGING",
+
+
+    "allOf": [
+        { "$ref": "file:CISC-ND-000280.schema"},
+        { "$ref": "file:CISC-ND-000980.schema"},
+        { "$ref": "file:CISC-ND-001000.schema"},
+        { "$ref": "file:CISC-ND-001310.schema"},
+        { "$ref": "file:CISC-ND-001450.schema"}
+    ]
+}

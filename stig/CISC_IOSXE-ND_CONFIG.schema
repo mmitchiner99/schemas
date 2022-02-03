@@ -1,0 +1,37 @@
+{
+
+    "$id": "https://cisco.com/CISC_IOSXE-ND_CONFIG.schema",
+    "title": "CISC_IOSXE-ND",
+
+
+    "allOf": [
+        { "$ref": "file:CISC-ND-000090.schema"},
+        { "$ref": "file:CISC-ND-000100.schema"},
+        { "$ref": "file:CISC-ND-000110.schema"},
+        { "$ref": "file:CISC-ND-000120.schema"},
+        { "$ref": "file:CISC-ND-000150.schema"},
+        { "$ref": "file:CISC-ND-000160.schema"},
+        { "$ref": "file:CISC-ND-000210.schema"},
+        { "$ref": "file:CISC-ND-000250.schema"},
+        { "$ref": "file:CISC-ND-000330.schema"},
+        { "$ref": "file:CISC-ND-000380.schema"},
+        { "$ref": "file:CISC-ND-000390.schema"},
+        { "$ref": "file:CISC-ND-000460.schema"},
+        { "$ref": "file:CISC-ND-000470b.schema"},
+        { "$ref": "file:CISC-ND-000620.schema"},
+        { "$ref": "file:CISC-ND-000720c.schema"},
+        { "$ref": "file:CISC-ND-000880.schema"},
+        { "$ref": "file:CISC-ND-000940.schema"},
+        { "$ref": "file:CISC-ND-001130.schema"},
+        { "$ref": "file:CISC-ND-001140.schema"},
+        { "$ref": "file:CISC-ND-001220.schema"},
+        { "$ref": "file:CISC-ND-001240.schema"},
+        { "$ref": "file:CISC-ND-001250.schema"},
+        { "$ref": "file:CISC-ND-001260.schema"},
+        { "$ref": "file:CISC-ND-001270.schema"},
+        { "$ref": "file:CISC-ND-001290.schema"},
+        { "$ref": "file:CISC-ND-001370b.schema"},
+        { "$ref": "file:CISC-ND-001410.schema"},
+        { "$ref": "file:CISC-ND-001440.schema"}
+    ]
+}

@@ -1,0 +1,30 @@
+{
+
+    "$id": "nd_000470a.schema",
+    "description": "STIG ID: CISC-ND-000470",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext:http"
+        ],
+    "properties": {
+        "openconfig-system-ext:http": {
+            "type": "object",
+            "required": ["openconfig-system-ext:http-enabled", "openconfig-system-ext:https-enabled"],
+            "properties": {
+                "openconfig-system-ext:http-enabled": {
+                    "const": false,
+                    "message": {
+                        "pattern": "Error in STIG ID: CISC-ND-000470 (ip-http_server)"
+                    }
+                },
+                "openconfig-system-ext:https-enabled": {
+                    "const": true,
+                    "message": {
+                        "pattern": "Error in STIG ID: CISC-ND-000470 (ip-https_server)"
+                    }
+                }
+            }
+        }
+    }
+}

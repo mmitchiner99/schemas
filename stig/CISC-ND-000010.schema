@@ -4,14 +4,21 @@
     "description": "STIG ID: CISC-ND-000010",
 
     "type": "object",
-    "required": [
-        "openconfig-system-ext:ip-http-max-connections"
-        ],
+    "required": ["openconfig-system-ext:http"],
     "properties": {
-        "openconfig-system-ext:ip-http-max-connections": {
-            "minimum": 2,
-            "maximum": 2
+        "openconfig-system-ext:http": {
+            "type": "object",
+            "required": ["openconfig-system-ext:ip-http-max-connections"],
+            "properties": {
+                "openconfig-system-ext:ip-http-max-connections": {
+                    "type": "number",
+                    "minimum": 2,
+                    "maximum": 2,
+                    "message": {
+                         "pattern": "Error in STIG ID: CISC-ND-000010"
+                    }
+                }
+            }
         }
     }
 }
-

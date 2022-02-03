@@ -1,0 +1,18 @@
+{
+
+    "$id": "nd_000620.schema",
+    "description": "STIG ID: CISC-ND-000620",
+
+    "type": "object",
+    "required": [
+        "openconfig-system-ext:password-encryption"
+        ],
+    "properties": {
+        "openconfig-system-ext:password-encryption": {
+            "const": true,
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-000620"
+            }
+        }
+    }
+}
