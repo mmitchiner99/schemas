@@ -12,7 +12,6 @@
         "openconfig-system-ext:ip_rcmd_rcp_enable",
         "openconfig-system-ext:ip_rcmd_rsh_enable",
         "openconfig-system-ext:service_config",
-        "openconfig-system-ext:service_finger",
         "openconfig-system-ext:service_tcp_small_servers",
         "openconfig-system-ext:service_udp_small_servers"
         ],
@@ -57,12 +56,6 @@
             "const": false,
             "message": {
                 "pattern": "Error in STIG ID: CISC-ND-000470 (service_config)"
-            }
-        },
-        "openconfig-system-ext:service_finger": {
-            "const": false,
-            "message": {
-                "pattern": "Error in STIG ID: CISC-ND-000470 (service_finger)"
             }
         },
         "openconfig-system-ext:service_tcp_small_servers": {

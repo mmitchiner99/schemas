@@ -4,6 +4,22 @@
     "title": "CISC_IOSXE-ND_LINES",
 
     "allOf": [
-        { "$ref": "file:CISC-ND-000140a.schema"}
+        { "$ref": "file:CISC-ND-000010b.schema"},
+        { "$ref": "file:CISC-ND-000010c.schema"},
+        { "$ref": "file:CISC-ND-000010d.schema"},
+        { "$ref": "file:CISC-ND-000010e.schema"},
+        { "$ref": "file:CISC-ND-000010f.schema"},
+        { "$ref": "file:CISC-ND-000140c.schema"},
+        { "$ref": "file:CISC-ND-000140d.schema"},
+        { "$ref": "file:CISC-ND-000140e.schema"},
+        { "$ref": "file:CISC-ND-000140f.schema"},
+        { "$ref": "file:CISC-ND-000140g.schema"},
+        { "$ref": "file:CISC-ND-000720c.schema"},
+        { "$ref": "file:CISC-ND-001370d.schema"},
+        { "$ref": "file:CISC-ND-001370e.schema"},
+        { "$ref": "file:CISC-ND-001370f.schema"},
+        { "$ref": "file:CISC-ND-001370g.schema"},
+        { "$ref": "file:CISC-ND-001370h.schema"},
+        { "$ref": "file:CISC-ND-001370i.schema"}
     ]
 }

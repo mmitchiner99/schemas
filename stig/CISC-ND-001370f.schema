@@ -1,0 +1,70 @@
+{
+
+    "$id": "nd_001370e.schema",
+    "description": "STIG ID: CISC-ND-001370",
+
+    "type": "object",
+    "required": ["config"],
+    "properties": {
+        "config": {
+            "type": "object",
+            "required": ["name", "index", "login-authentication"],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "enum": ["aux", "console", "vty"]
+                },
+                "index": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 4
+                },
+                "login-authentication": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "if": {
+    "properties": {
+        "config": {
+            "type": "object",
+            "required": ["name", "index"],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "const": "vty"
+                },
+                "index": {
+                    "type": "number",
+                    "const": 1
+                }
+            }
+        }
+    }
+    },
+    "then": {
+    "properties": {
+        "config": {
+            "type": "object",
+            "required": ["name", "index", "login-authentication"],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "const": "vty"
+                },
+                "index": {
+                    "type": "number",
+                    "const": 1
+                },
+                "login-authentication": {
+                    "type": "string",
+                    "message": {
+                        "pattern": "Error in STIG ID: CISC-ND-001370 -- login authentication"
+                    }
+                }
+            }
+        }
+    }
+    }
+}

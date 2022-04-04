@@ -1,0 +1,47 @@
+{
+
+    "$id": "nd_000490a.schema",
+    "description": "STIG ID: CISC-ND-000490",
+
+    "type": "object",
+    "required": [
+        "authentication"
+        ],
+    "properties": {
+        "authentication": {
+            "required": [
+                "admin-user"
+            ],
+            "properties": {
+                "admin-user": {
+                    "type": "object",
+                    "required": [
+                        "config"
+                    ],
+                    "properties": {
+                        "config": {
+                            "type": "object",
+                            "required": [
+                                "admin-password"
+                            ],
+                            "properties": {
+                                "admin-password": {
+                                    "type": "string",
+                                    "message": {
+                                        "pattern": "Error in STIG ID: CISC-ND-000490 -- admin-user"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "users": {
+                    "type": "null",
+                    "message": {
+                        "pattern": "Error in STIG ID: CISC-ND-000490 -- users"
+                    }
+                }
+            }
+        }
+    }
+}

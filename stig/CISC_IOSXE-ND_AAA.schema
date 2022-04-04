@@ -4,13 +4,15 @@
     "title": "CISC_IOSXE-ND_AAA",
 
     "allOf": [
-        { "$ref": "file:CISC-ND-000490.schema"},
+        { "$ref": "file:CISC-ND-000490a.schema"},
+        { "$ref": "file:CISC-ND-000490b.schema"},
         { "$ref": "file:CISC-ND-000550.schema"},
         { "$ref": "file:CISC-ND-000570.schema"},
         { "$ref": "file:CISC-ND-000580.schema"},
         { "$ref": "file:CISC-ND-000590.schema"},
         { "$ref": "file:CISC-ND-000600.schema"},
         { "$ref": "file:CISC-ND-000610.schema"},
-        { "$ref": "file:CISC-ND-001370a.schema"}
+        { "$ref": "file:CISC-ND-001370a.schema"},
+        { "$ref": "file:CISC-ND-001370c.schema"}
     ]
 }

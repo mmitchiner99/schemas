@@ -1,0 +1,54 @@
+{
+
+    "$id": "nd_000490b.schema",
+    "description": "STIG ID: CISC-ND-000490",
+
+    "type": "object",
+    "required": [
+        "authentication"
+        ],
+    "properties": {
+        "authentication": {
+            "required": [
+                "openconfig-system-ext:authentication-lists-login"
+            ],
+            "properties": {
+                "openconfig-system-ext:authentication-lists-login": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["config" ],
+                        "properties": {
+                            "config": {
+                                "type": "object",
+                                "required": ["name", "authentication-method"],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "authentication-method": {
+                                        "type": "array",
+                                        "items": {
+                                            "enum": ["RADIUS_ALL", "TACACS_ALL", "LOCAL"]
+                                        },
+                                        "contains": {
+                                            "const": "LOCAL"
+                                        },
+                                        "uniqueItems": true,
+                                        "minItems": 2,
+                                        "message": {
+                                            "pattern": "Error in STIG ID: CISC-ND-000490 -- AAA authentication-lists-login"
+                                        }
+                                    },
+                                    "message": {
+                                        "pattern": "Error in STIG ID: CISC-ND-000490 -- AAA authentication-lists-login"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

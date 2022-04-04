@@ -5,7 +5,9 @@
 
     "type": "object",
     "required": [
-        "openconfig-system-ext:http"
+        "openconfig-system-ext:http",
+        "openconfig-system-ext:finger",
+        "openconfig-system-ext:boot"
         ],
     "properties": {
         "openconfig-system-ext:http": {
@@ -22,6 +24,30 @@
                     "const": true,
                     "message": {
                         "pattern": "Error in STIG ID: CISC-ND-000470 (ip-https_server)"
+                    }
+                }
+            }
+        },
+        "openconfig-system-ext:finger": {
+            "const": false,
+            "message": {
+                "pattern": "Error in STIG ID: CISC-ND-000470 (ip finger)"
+            }
+        },
+        "openconfig-system-ext:boot": {
+            "type": "object",
+            "required": ["openconfig-system-ext:network"],
+            "properties": {
+                "openconfig-system-ext:network": {
+                    "type": "object",
+                    "required": ["openconfig-system-ext:enabled"],
+                    "properties": {
+                        "openconfig-system-ext:enabled": {
+                            "const": false,
+                            "message": {
+                                "pattern": "Error in STIG ID: CISC-ND-000470 (boot network)"
+                            }
+                        }
                     }
                 }
             }

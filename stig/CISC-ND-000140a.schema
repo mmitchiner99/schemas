@@ -1,6 +1,6 @@
 {
 
-    "$id": "nd_000140.schema",
+    "$id": "nd_000140a.schema",
     "description": "STIG ID: CISC-ND-000140",
 
     "type": "object",

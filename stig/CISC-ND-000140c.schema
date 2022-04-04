@@ -1,0 +1,96 @@
+{
+
+    "$id": "nd_000140c.schema",
+    "description": "STIG ID: CISC-ND-000140",
+
+    "type": "object",
+    "required": ["config"],
+    "properties": {
+        "config": {
+            "type": "object",
+            "required": ["name", "index", "timeout"],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "enum": ["aux", "console", "vty"]
+                },
+                "index": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 4
+                },
+                "timeout": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 10
+                },
+                "transport": {
+                    "type": "object",
+                    "required": ["input"],
+                    "properties": {
+                        "input": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "if": {
+    "properties": {
+        "config": {
+            "type": "object",
+            "required": ["name", "index"],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "const": "vty"
+                },
+                "index": {
+                    "type": "number",
+                    "const": 0
+                }
+            }
+        }
+    }
+    },
+    "then": {
+    "properties": {
+        "config": {
+            "type": "object",
+            "required": ["name", "index", "transport"],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "const": "vty"
+                },
+                "index": {
+                    "type": "number",
+                    "const": 0
+                },
+                "transport": {
+                    "type": "object",
+                    "required": ["input"],
+                    "properties": {
+                        "input": {
+                            "type": "array",
+                            "items": {
+                                "enum": [
+                                    "ssh"
+                                ],
+                                "required": [
+                                    "ssh"
+                                ]
+                            },
+                            "uniqueItems": true,
+                            "message": {
+                                "pattern": "Error in STIG ID: CISC-ND-000010 -- transport input SSH"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}

@@ -8,7 +8,7 @@
     "properties": {
         "mdd:openconfig": {
             "type": "object",
-            "required": ["openconfig-system:system", "openconfig-acl:acl", "openconfig-acl-ext:lines"],
+            "required": ["openconfig-system:system", "openconfig-acl:acl", "openconfig-line-ext:lines", "openconfig-acl-ext:lines"],
             "properties": {
                 "openconfig-system:system": {
                     "type": "object",
@@ -59,7 +59,7 @@
                          }
                     }
                 },
-                "openconfig-acl-ext:lines": {
+                "openconfig-line-ext:lines": {
                     "type": "object",
                     "required": ["line"],
                     "properties": {
@@ -68,6 +68,20 @@
                             "items": {
                                 "description": "STIG: CISC_IOSXE-ND_LINES",
                                 "$ref": "file:CISC_IOSXE-ND_LINES.schema"
+                            },
+                            "minItems": 5
+                        }
+                    }
+                },
+                "openconfig-acl-ext:lines": {
+                    "type": "object",
+                    "required": ["line"],
+                    "properties": {
+                        "line": {
+                            "type": "array",
+                            "items": {
+                                "description": "STIG: CISC_IOSXE-ND_LINES-ACL",
+                                "$ref": "file:CISC_IOSXE-ND_LINES-ACL.schema"
                             },
                             "minItems": 1
                         }

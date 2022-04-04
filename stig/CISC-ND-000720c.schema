@@ -1,21 +1,33 @@
 {
 
-    "$id": "nd_000720c.schema",
+    "$id": "nd_000720.schema",
     "description": "STIG ID: CISC-ND-000720",
 
     "type": "object",
-    "required": [
-        "openconfig-system-ext:console-exec-timeout-seconds"
-        ],
+    "required": ["config"],
     "properties": {
-        "openconfig-system-ext:console-exec-timeout-seconds": {
-            "type": "number",
-            "minimum": 1,
-            "maximum": 600,
-            "message": {
-                "pattern": "Error in STIG ID: CISC-ND-000720 -- Console Timeout"
+        "config": {
+            "type": "object",
+            "required": ["name", "index", "timeout"],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "enum": ["aux", "console", "vty"]
+                },
+                "index": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 4
+                },
+                "timeout": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 10
+                },
+                "message": {
+                    "pattern": "Error in STIG ID: CISC-ND-000720 -- console timeout"
+                }
             }
         }
     }
 }
-

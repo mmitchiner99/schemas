@@ -44,8 +44,8 @@
                             },
                             "uniqueItems": true,
                             "message": {
-                             "pattern": "Error in STIG ID: CISC-ND-000530 -- Encryption Algorithm"
-                             }
+                                "pattern": "Error in STIG ID: CISC-ND-000530 -- Encryption Algorithm"
+                            }
                         }
                     }
                  }
